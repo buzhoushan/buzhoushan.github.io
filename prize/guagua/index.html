@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>刮刮卡</title>
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="//asset.buzhoushan.top/js/jquery-v1.11.1.js"></script>
+<style type="text/css">
+	*{margin:0;padding:0;list-style-type:none;}
+	a,img{border:0;}
+	body{position:relative;background:url(img/guaguaka_bg.png) no-repeat 50% 0;height:640px;overflow:hidden;background-size: 100% 100%}
+	#bg2{width:295px;height:195px;margin:0 auto;}
+	#gua1{width:300px;height:160;margin:0 auto;margin-top: 20px;}
+	#notify{width:295px;height:101px;margin:0 auto;margin-top: 200px}
+	#nImg_div{position:absolute;color:white;font-size:17px;font-family:'黑体';}
+	#nImg_div div{width:245px;height:101px;padding:20px 0px 0px 50px;}
+	#di{width:295px;margin:0 auto;}
+	#bg1{display:none;position:fixed;top:0%;left:0%;width:100%;height:100%;background-color:black;z-index:1001;-moz-opacity:0.7;opacity:.70;filter:alpha(opacity=70);}
+	#show{display:none;position:absolute;top:222px;left:50%;margin-left:-148px;text-align:center;background-color:#fff;z-index:1002;width:300px;height:160px;overflow:hidden;}
+	#show div{margin-top:-125px;margin-left:40px;padding-right:40px;line-height:1.5;color:#000000;font-size:17px;font-family:'黑体';}
+	#gua1_img {position: absolute;width:284px;height:143px;z-index: 1;margin-top:9.3px;margin-left:7.5px;background: black;text-align: center;line-height: 146px;color:black;font-size: 40px;font-weight: bolder;}
+	#redux {position: absolute;z-index: 2;width:286px;height:146px;margin-top:8.4px;margin-left:7.5px}
+	#container{position:absolute;width:300px;height:160px;}
+</style>
+</head>
+<body>
+
+	<div id="bg2"><img id="bg2_img" src="img/guaguaka_word.png" width="295" height="195" style="position:absolute;"/></div>
+
+	<div id="gua1" class="container">
+		<img id="container" src="img/gua_image1.png"/>
+		<span id="gua1_img">特 等 奖</span>
+		<img id="redux" src="img/gua_image2.png"/>
+	</div>
+	<div id="notify">
+		<img id="nImg" src="img/notice_bg.png" style="position: absolute;width:300;height:101px;"/>
+		<div id="nImg_div">
+			<div>推荐好友来刮奖，还可抽神秘大奖哦！</div>
+		</div>
+	</div>
+	<div id="bg1"></div>
+
+	<div id="show">
+		<img id="show_img" src="img/dialog_bg.png" width="100%" height="100%"/>
+		<div>特等奖</div>
+		<img id="show_btn" src="img/btn_sure.png" style="margin-top: 30px;width:88px;height:38px" onClick="hidediv()"/>
+	</div>
+
+		<script src='jquery.eraser.js' type='text/javascript'></script>
+		<script>
+			$('body').css('height', window.screen.availHeight);
+			$(window).resize(function(){
+				$('body').css('height', window.screen.availHeight);
+			});
+			var flag = 1;
+			function getDraw(){
+				$.getJSON('/LuckDraw.php', function(json, textStatus) {
+					$('#gua1_img,#show div').text(json[1]);
+				})
+			}
+			$(document).ready(function() {
+				getDraw();
+			});
+		$('#resetBtn').click(function(event) {
+		  $('#redux').eraser('reset');
+			$('#progress').html('0%');
+		  event.preventDefault();
+		});
+			function showdiv() {
+				 document.getElementById("bg1").style.display ="block";
+				 document.getElementById("show").style.display ="block";
+			}
+
+			function hidediv() {
+				document.getElementById("bg1").style.display ='none';
+				document.getElementById("show").style.display ='none';
+				getDraw();
+				$('#redux').eraser('reset');
+		  		event.preventDefault();
+			}
+			function showWhite(){
+				$('#gua1_img').css('color','white');
+				flag = !1;
+			}
+			$(function(){
+				$('#image').eraser( 'size', 80 )
+				$('#redux').eraser({
+					completeRatio:0.9,
+					progressFunction: function(p) {
+						if (flag){
+							showWhite();
+						}
+						if (p>0.85){
+							$('#redux').eraser('clear');
+							showdiv();
+							event.preventDefault();
+						}
+					},
+					completeFunction:function(p){
+						console.log('p'+p)
+					}
+				});
+			});
+		</script>
+</body>
+</html>

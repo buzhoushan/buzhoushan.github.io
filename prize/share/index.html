@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>抽奖程序使用方法及实现原理</title>
+	<style>
+		::-webkit-scrollbar{width:0px}
+		body{color:white;
+			font-size: 36px;
+		}
+		.button{
+			width: 100px;
+			height: 100px;
+			display: -webkit-inline-box;
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			cursor: pointer;
+		}
+		.prev{margin-right:110px;}
+		.middle{display: table;}
+		.bg1{position:fixed;top:0%;left:0%;width:100%;height:100%;background-color:black;z-index:1001;-moz-opacity:0.7;opacity:.70;filter:alpha(opacity=70);}
+		.show{position:absolute;left:50%;margin-left:-148px;text-align:center;background-color:#fff;z-index:1002;overflow:hidden;}
+		.show div{margin-top:-125px;margin-left:40px;padding-right:40px;line-height:1.5;color:#000000;font-size:17px;font-family:'黑体';}
+	</style>
+</head>
+<body style="background:black">
+	<div class="middle page" style="margin:0 auto;">
+		<h1>抽奖程序使用方法及实现原理</h1>
+	</div>
+	<div class="middle page" style="margin:0 auto;display:none">
+		<h1 onclick="code()">摇一摇抽奖</h1>
+		<div class="code" style="display:none">
+			<div class="bg1"></div>
+			<div class="show">
+				<img class="show_img" src="image/shake.png" width="100%" height="100%"/>
+			</div>
+		</div>
+	</div>
+	<div class="page" style="border:5px solid white; margin:0 auto; display:none">
+		<iframe src="http://game.buzhoushan.top/shake/index.html" style="width:100%;height:100%"></iframe>
+	</div>
+	<div class="middle page" style="margin:0 auto;display:none">
+		<h1 onclick="code()">刮刮卡抽奖</h1>
+		<div class="code" style="display:none">
+			<div class="bg1"></div>
+			<div class="show">
+				<img class="show_img" src="image/guagua.png" width="100%" height="100%"/>
+			</div>
+		</div>
+	</div>
+	<div class="page" style="border:5px solid white; margin:0 auto; display:none">
+		<iframe src="http://game.buzhoushan.top/guagua/index.html" style="width:100%;height:100%"></iframe>
+	</div>
+	<div class="middle page" style="margin:0 auto;display:none">
+		<h1 onclick="code()">大转盘抽奖</h1>
+		<div class="code" style="display:none">
+			<div class="bg1"></div>
+			<div class="show">
+				<img class="show_img" src="image/truntable.png" width="100%" height="100%"/>
+			</div>
+		</div>
+	</div>
+	<div class="page" style="border:5px solid white; margin:0 auto; display:none">
+		<iframe src="http://game.buzhoushan.top/truntable/index.html" style="width:100%;height:100%"></iframe>
+	</div>
+	<span class="button prev"></span>
+	<span class="button next"></span>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(window).resize(function(){
+			middle();
+		});
+		var middle = function(){
+			var H = document.body.scrollHeight-document.body.scrollTop;
+			$('.middle').css('margin-top', (H/2-200));
+			$('iframe').parent().css('height', H-30).css('width', H/1.775);
+			$('.code .show').css('top', H/2-200);
+		}
+		var next = function(){
+			var thisPage = $('.page:visible');
+			if ((thisPage.index()+1) == $('.page').length ){
+				return!1;
+			}
+			thisPage.hide().next().show();
+			var newPage = $('.page:visible')
+			var top = newPage.css('margin-top');
+			newPage.css('margin-top', document.body.scrollHeight).animate({'margin-top':top},500,'swing');
+		}
+		var prev = function(){
+			var thisPage = $('.page:visible');
+			if (!thisPage.index()){
+				return!1;
+			}
+			thisPage.hide().prev().show();
+			var newPage = $('.page:visible')
+			var top = newPage.css('margin-top');
+			newPage.css('margin-top', -100).animate({'margin-top':top},500,'swing');
+		}
+		var code = function(){
+			$('.page:visible').find('.code').toggle(500);
+		}
+		var codeHide = function(){
+			$('.code').hide(500);
+
+		}
+		$(document).on('click','.bg1',codeHide);
+		$(document).on('click','.next',next);
+		$(document).on('click','.prev',prev);
+		function jumpPage() { 
+			switch (event.keyCode){
+				case 37:
+				case 38:
+					prev();
+				break;
+				case 39:
+				case 40:
+				case 32:
+					next();
+				break;
+				case 13:
+				code();
+				break;
+			}
+		}
+		document.onkeydown=jumpPage;
+		middle();
+	</script>
+</body>
+</html>
