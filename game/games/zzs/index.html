@@ -99,8 +99,8 @@
     <script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/games/icon/zzs.png",
-		        "timeLineLink": "https://buzhoushan.github.io/games/games/zzs",
+		        "imgUrl": "https://buzhoushan.github.io/game/icon/zzs.png",
+		        "timeLineLink": "https://buzhoushan.github.io/game/games/zzs",
 		        "tTitle": "涨姿势-空中传媒",
 		        "tContent": "涨姿势-空中传媒"
 		};
@@ -110,7 +110,7 @@
 		}
 		function clickMore(){
 			 if((window.location+"").indexOf("zf",1)>0){
-			 	window.location = "https://buzhoushan.github.io/games/games/zzs";
+			 	window.location = "https://buzhoushan.github.io/game/games/zzs";
 			  }
 			  else{
 			 	goHome();
@@ -153,7 +153,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://buzhoushan.github.io/games/games/zzs/share.png"
+			<img width=100% src="https://buzhoushan.github.io/game/games/zzs/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -161,7 +161,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "zzs" };
 			var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink = "https://buzhoushan.github.io/games/games/zzs";
+			window.shareData.timeLineLink = "https://buzhoushan.github.io/game/games/zzs";
 			function dp_submitScore(score,step,percent){
 				myData.score = parseInt(score);
 				myData.step = step;
@@ -177,7 +177,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到空中传媒排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/games/";
+                            window.location = "https://buzhoushan.github.io/game/";
                         }
                         else {
                             document.location.href = mebtnopenurl;

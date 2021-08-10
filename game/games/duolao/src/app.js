@@ -85,8 +85,8 @@ var HelloWorldLayer = cc.Layer.extend({
             // 微信分享的数据
             var wxData = {
                 "appId": "", // 服务号可以填写appId
-                "imgUrl" : 'https://buzhoushan.github.io/games/games/duolao/460.jpg',
-                "link" : 'https://buzhoushan.github.io/games/games/duolao/',
+                "imgUrl" : 'https://buzhoushan.github.io/game/games/duolao/460.jpg',
+                "link" : 'https://buzhoushan.github.io/game/games/duolao/',
                 "desc" : text,
                 "title" : '来比记忆力'
             };

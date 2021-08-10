@@ -1,5 +1,5 @@
-gameurl = 'https://buzhoushan.github.io/games/games/coreball/';
-imgUrl = "https://buzhoushan.github.io/games/games/coreball/icon.png";
+gameurl = 'https://buzhoushan.github.io/game/games/coreball/';
+imgUrl = "https://buzhoushan.github.io/game/games/coreball/icon.png";
 
 
 openid = '';

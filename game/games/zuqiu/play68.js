@@ -13,8 +13,8 @@ function play68_submitScore(score) {
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'https://buzhoushan.github.io/games/games/zuqiu/soccermoveicon.png';
-	lineLink = 'https://buzhoushan.github.io/games/games/zuqiu';
+	imgUrl = 'https://buzhoushan.github.io/game/games/zuqiu/soccermoveicon.png';
+	lineLink = 'https://buzhoushan.github.io/game/games/zuqiu';
 	descContent = "快跟我一起用手指指点足球！";
 	updateShareScore(bestScore);
 	appid = '';

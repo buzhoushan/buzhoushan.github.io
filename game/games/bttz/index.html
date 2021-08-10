@@ -157,10 +157,10 @@
                    }
             </script>
 		<script language=javascript>
-		var mebtnopenurl = 'https://buzhoushan.github.io/games/games/';
+		var mebtnopenurl = 'https://buzhoushan.github.io/game/games/';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/games/icon/bttz.png",
-		        "timeLineLink": "https://buzhoushan.github.io/games/games/bttz/index.html",
+		        "imgUrl": "https://buzhoushan.github.io/game/icon/bttz.png",
+		        "timeLineLink": "https://buzhoushan.github.io/game/games/bttz/index.html",
 		        "tTitle": "冰桶挑战-空中传媒",
 		        "tContent": "冰桶挑战-空中传媒"
 		};
@@ -170,7 +170,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("f=zf",1)>0){
-				window.location = "https://buzhoushan.github.io/games/games/";
+				window.location = "https://buzhoushan.github.io/game/games/";
 			 }
 			 else{
 				goHome();
@@ -213,7 +213,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://buzhoushan.github.io/games/games/bttz/share.png"
+			<img width=100% src="https://buzhoushan.github.io/game/games/bttz/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -221,7 +221,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "bttz" };
 			 var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink ="https://buzhoushan.github.io/games/games/bttz";
+			window.shareData.timeLineLink ="https://buzhoushan.github.io/game/games/bttz";
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName ="共倒"+score+"升";
@@ -235,7 +235,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到空中传媒排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/games/games/";
+                            window.location = "https://buzhoushan.github.io/game/games/";
                         }
                         else {
                             document.location.href = mebtnopenurl;

@@ -75,7 +75,7 @@ function addShareWX() {
 	t.style.cssText = "text-align:right;padding-left:10px;";
 	e.appendChild(t);
 	var n = document.createElement("img");
-	n.src = "https://buzhoushan.github.io/games/games/xcw/py.png";
+	n.src = "https://buzhoushan.github.io/game/games/xcw/py.png";
 	n.id = "share-wx-img";
 	n.style.cssText = "max-width:280px;padding-right:25px;";
 	t.appendChild(n);
@@ -107,7 +107,7 @@ function isMobile() {
 function isIOS() {
 	return navigator.userAgent.match(/iphone|ipod|ios/i)
 }
-var HOME_PATH = HOME_PATH || "https://buzhoushan.github.io/games/",
+var HOME_PATH = HOME_PATH || "https://buzhoushan.github.io/game/",
 RESOURCE_IMG_PATH = RESOURCE_IMG_PATH || "/images/",
 HORIZONTAL = HORIZONTAL || false,
 COVER_SHOW_TIME = COVER_SHOW_TIME || 2e3;

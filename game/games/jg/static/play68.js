@@ -3,7 +3,7 @@
 }
 
 function goHome() {
-	window.location.href = "https://buzhoushan.github.io/games/games/";
+	window.location.href = "https://buzhoushan.github.io/game/games/";
 }
 
 function play68_submitScore(score) {
@@ -12,8 +12,8 @@ function play68_submitScore(score) {
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'https://buzhoushan.github.io/games/games/jgfx/static/icon.png';
-	lineLink = 'https://buzhoushan.github.io/games/games/jgfx/';
+	imgUrl = 'https://buzhoushan.github.io/game/games/jgfx/static/icon.png';
+	lineLink = 'https://buzhoushan.github.io/game/games/jgfx/';
 	descContent = "来比比看谁的手指更厉害！";
 	updateShareScore(bestScore);
 	appid = '';

@@ -29,7 +29,7 @@ Game9G.prototype.init = function() {
 	this.gzurl = "http://game.ikongzhong.cn";
 	// this.shareDomain = this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
 	this.shareData.imgurl = "http://mmbiz.qpic.cn/mmbiz/2zpp2iaH4HWEgbChjnDCvrnNlGhflD2ia06fcvQtgvvU0wdDVdAHbxbGxK8SCMKFBIpo20ZbjLLHkrxzT7eyKiaiaQ/640";
-	this.shareData.link = "https://buzhoushan.github.io/games/games/dtsl/";
+	this.shareData.link = "https://buzhoushan.github.io/game/games/dtsl/";
 	switch (this.utils.getAppType()) {
 		case "wx":
 			this.app = new Game9GWx(this);

@@ -50,8 +50,8 @@
 		<script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/games/icon/bbjx.png",
-		        "timeLineLink": "https://buzhoushan.github.io/games/games/bbjx",
+		        "imgUrl": "https://buzhoushan.github.io/game/icon/bbjx.png",
+		        "timeLineLink": "https://buzhoushan.github.io/game/games/bbjx",
 		        "tTitle": "步步惊心-空中传媒",
 		        "tContent": "步步惊心-空中传媒"
 		};
@@ -61,7 +61,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "https://buzhoushan.github.io/games/games/bbjx";
+				window.location = "https://buzhoushan.github.io/game/games/bbjx";
 			 }
 			 else{
 				goHome();
@@ -104,7 +104,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://buzhoushan.github.io/games/games/bbjx/share.png"
+			<img width=100% src="https://buzhoushan.github.io/game/games/bbjx/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -112,7 +112,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "bbjx" };
 			var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink ="https://buzhoushan.github.io/games/games/bbjx/";
+			window.shareData.timeLineLink ="https://buzhoushan.github.io/game/games/bbjx/";
 			function dp_submitScore(score){
 				myData.score = parseInt(score);
 				myData.scoreName ="解开了谜题共用"+score+"步";
@@ -126,7 +126,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到空中传媒排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/games/" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "https://buzhoushan.github.io/game/" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;

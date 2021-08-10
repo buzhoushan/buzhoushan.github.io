@@ -6644,7 +6644,7 @@ var __extends = this.__extends || function(c, d) {
 		};
 		d.prototype.moreGame = function(b) {
 			// _hmt.push(["_trackEvent", "button", "moreGame"]);
-			window.location.href="https://buzhoushan.github.io/games/"
+			window.location.href="https://buzhoushan.github.io/game/"
 		};
 		d.prototype.setScore = function(b) {
 			this.scoreLabel1.text = "" + b + "00 m";

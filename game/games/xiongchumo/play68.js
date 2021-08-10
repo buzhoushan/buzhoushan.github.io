@@ -12,10 +12,10 @@ function play68_submitScore(score) {
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'https://buzhoushan.github.io/games/games/xiongchumo/wenzhangku.png';
+	imgUrl = 'https://buzhoushan.github.io/game/games/xiongchumo/wenzhangku.png';
 	//var domains = ['game.ikongzhong.cn','www.xinwenzhang.com'];
 	//var domain = domains[new Date().getTime()%4];
-	lineLink = 'https://buzhoushan.github.io/games/games/xiongchumo/';
+	lineLink = 'https://buzhoushan.github.io/game/games/xiongchumo/';
 	descContent = "反向跑酷没玩过吧？快来一起跑！";
 	updateShareScore(bestScore);
 	appid = '';

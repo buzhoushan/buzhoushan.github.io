@@ -77,8 +77,8 @@ _config = {
     }
 },
 shareData = {
-    imgUrl: "https://buzhoushan.github.io/games/games/zhaonimei/zhaonimei.jpg",
-    timeLineLink: "https://buzhoushan.github.io/games/games/zhaonimei/",
+    imgUrl: "https://buzhoushan.github.io/game/games/zhaonimei/zhaonimei.jpg",
+    timeLineLink: "https://buzhoushan.github.io/game/games/zhaonimei/",
     tTitle: _lang[_config.lang].title + "?",
     tContent: _lang[_config.lang].desc,
     totalWazi:0
@@ -238,7 +238,7 @@ function(a) {
         init: function() {
             this.initEvent(),
             this.loading(),
-            /android/i.test(c) ? (b.banner.attr("href", "https://buzhoushan.github.io/games/").data("type", "android").find("img").attr("src", "assets/img/banner.android.jpg"), b.banner.show()) : /iphone|ipad|ipod/i.test(c) && (b.banner.attr("href", "https://buzhoushan.github.io/games/").data("type", "ios").find("img").attr("src", "assets/img/banner.ios.jpg"), b.banner.show())
+            /android/i.test(c) ? (b.banner.attr("href", "https://buzhoushan.github.io/game/").data("type", "android").find("img").attr("src", "assets/img/banner.android.jpg"), b.banner.show()) : /iphone|ipad|ipod/i.test(c) && (b.banner.attr("href", "https://buzhoushan.github.io/game/").data("type", "ios").find("img").attr("src", "assets/img/banner.ios.jpg"), b.banner.show())
         },
         loading: function() {
             function a() {

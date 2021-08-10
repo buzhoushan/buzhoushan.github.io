@@ -3,10 +3,10 @@
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'https://buzhoushan.github.io/games/games/heibai/logo.png';
+	imgUrl = 'https://buzhoushan.github.io/game/games/heibai/logo.png';
 	var domains = ['http://game.ikongzhong.cn','http://game.ikongzhong.cn','http://game.ikongzhong.cn','http://game.ikongzhong.cn'];
 	var domain = domains[new Date().getTime()%4];
-	lineLink = 'https://buzhoushan.github.io/games/games/heibai/';
+	lineLink = 'https://buzhoushan.github.io/game/games/heibai/';
 	descContent = "史上导致最多手指和眼珠抽筋的游戏（别踩白块儿）！";
 	updateShareScore(bestScore);
 	appid = '';

@@ -190,7 +190,7 @@ var SG = {
         window.softgames._trackAction("ingameRedirectClicked");
         var url=softgames.back_url;
         
-        if(typeof url !== "string") url="https://buzhoushan.github.io/games/";
+        if(typeof url !== "string") url="https://buzhoushan.github.io/game/";
         else url="http://"+url;
         
         window.location.href=url;

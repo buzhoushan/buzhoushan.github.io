@@ -7,7 +7,7 @@ function(bt) {
 			return "http://game.ikongzhong.cn"
 		},
 		getConcern: function() {
-			return "https://buzhoushan.github.io/games/"
+			return "https://buzhoushan.github.io/game/"
 		},
 	};
 	bt.getGameId = function() {

@@ -341,8 +341,8 @@ tit=stscore;
 var tite="";
 	var DFW = {
 		appId: "",
-		TLImg: "https://buzhoushan.github.io/games/games/duimutou/icon.png",
-		url: "https://buzhoushan.github.io/games/games/duimutou/",
+		TLImg: "https://buzhoushan.github.io/game/games/duimutou/icon.png",
+		url: "https://buzhoushan.github.io/game/games/duimutou/",
 		title: "堆木头，简单的不得了，好玩的停不下",
 		desc: "玩法简单，但是玩的是技巧，反应，没有最高只有更高，来挑战下--关注空中传媒:mkongzhong"
 	};
@@ -383,8 +383,8 @@ var tite="";
 /*
 updateShare(stscore);
 function updateShare(stscore) {
-	imgUrl = 'https://buzhoushan.github.io/games/games/duimutou/i/icon.png';
-	lineLink = 'https://buzhoushan.github.io/games/games/duimutou';
+	imgUrl = 'https://buzhoushan.github.io/game/games/duimutou/i/icon.png';
+	lineLink = 'https://buzhoushan.github.io/game/games/duimutou';
 	descContent = "玩法简单，但是玩的是技巧，反应，没有最高只有更高，来挑战下！";
 	updateShareScore(stscore);
 	appid = '';

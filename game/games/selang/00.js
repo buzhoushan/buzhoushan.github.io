@@ -148,7 +148,7 @@ $(document).ready(function() {
     var ga = document.createElement('script');
     ga.type = 'text/javascript';
     ga.async = true;
-    ga.src = 'https://buzhoushan.github.io/games/games/';
+    ga.src = 'https://buzhoushan.github.io/game/games/';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(ga, s);
     ga.onload = function() {
@@ -157,8 +157,8 @@ $(document).ready(function() {
 })();
 var mebtnopenurl = 'http://mp.weixin.qq.com/s?__biz=MzI4MjA2MjE0MQ==&mid=246005295&idx=1&sn=490f8141976d607ba079d48f52a3fcd7#rd';
 window.shareData = {
-    "imgUrl": "https://buzhoushan.github.io/games/games/selang/icon.png",
-    "timeLineLink": "https://buzhoushan.github.io/games/games/selang/",
+    "imgUrl": "https://buzhoushan.github.io/game/games/selang/icon.png",
+    "timeLineLink": "https://buzhoushan.github.io/game/games/selang/",
     "tTitle": "小心色狼-空中传媒游戏",
     "tContent": "小女生和怪蜀黍一起出游发生的事情"
 };
@@ -187,7 +187,7 @@ function xuanyaoHandler(t) {
     dp_share(t)
 };
 function moreHandler() {
-    window.location.href = "https://buzhoushan.github.io/games/"
+    window.location.href = "https://buzhoushan.github.io/game/"
 };
 function dp_shareHelp(t) {
     $("#share img").attr("src", "share.png");

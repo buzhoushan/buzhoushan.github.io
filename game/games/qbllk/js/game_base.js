@@ -1,6 +1,6 @@
-if (void 0 == APP_BASE_URL) var APP_BASE_URL = "https://buzhoushan.github.io/games/";
-if (void 0 == GAME_LIST_URL) var GAME_LIST_URL = "https://buzhoushan.github.io/games/";
-if (void 0 == FOLLOW_URL) var FOLLOW_URL = "https://buzhoushan.github.io/games/";
+if (void 0 == APP_BASE_URL) var APP_BASE_URL = "https://buzhoushan.github.io/game/";
+if (void 0 == GAME_LIST_URL) var GAME_LIST_URL = "https://buzhoushan.github.io/game/";
+if (void 0 == FOLLOW_URL) var FOLLOW_URL = "https://buzhoushan.github.io/game/";
 var BASE_RES_DIR = "../",
 	RES_DIR = "",
 	APP_DEPLOYMENT = "WEB",
@@ -13,7 +13,7 @@ var BASE_RES_DIR = "../",
 	SHOW_LLAMA = !0,
 	SHOW_COPYRIGHT = !1,
 	IN_WEIXIN = !1;
-0 <= document.URL.indexOf("file://") && (IS_ANDROID || IS_IOS) && (APP_DEPLOYMENT = "APP", USE_NATIVE_SOUND = USE_NATIVE_SHARE = !0, APP_BASE_URL = "https://buzhoushan.github.io/games/");
+0 <= document.URL.indexOf("file://") && (IS_ANDROID || IS_IOS) && (APP_DEPLOYMENT = "APP", USE_NATIVE_SOUND = USE_NATIVE_SHARE = !0, APP_BASE_URL = "https://buzhoushan.github.io/game/");
 document.addEventListener("WeixinJSBridgeReady", function () {
     IN_WEIXIN = !0;
     WeixinJSBridge.call("showOptionMenu");
@@ -36,8 +36,8 @@ var PID = 0,
 var mebtnopenurl = "http://mp.weixin.qq.com/s?__biz=MzI4MjA2MjE0MQ==&mid=246005295&idx=1&sn=490f8141976d607ba079d48f52a3fcd7#rd";
 
 window.shareData = {
-    "imgUrl": "https://buzhoushan.github.io/games/icon/qbllk.png",
-    "timeLineLink": "https://buzhoushan.github.io/games/games/qbllk/",
+    "imgUrl": "https://buzhoushan.github.io/game/icon/qbllk.png",
+    "timeLineLink": "https://buzhoushan.github.io/game/games/qbllk/",
     "tTitle": "奇葩连连看-空中传媒",
     "tContent": "要你命的奇葩大合集，玩完这款游戏，我都快变成奇葩了。"
 };
