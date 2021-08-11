@@ -45,8 +45,9 @@
             else {
                 document.getElementById('real_log').appendChild(document.createTextNode('--deviceorientation--'));
                 window.addEventListener('deviceorientation', function (event) {
-                    document.getElementById('log').innerText = event.beta;
-                    document.getElementById('real_log').appendChild(document.createTextNode('不是微信：'+event.beta));
+                    let re = event.beta?event.beta:'木有';
+                    document.getElementById('log').innerText = re;
+                    document.getElementById('real_log').appendChild(document.createTextNode('不是微信：' + re));
                 });
             }
         } else {
