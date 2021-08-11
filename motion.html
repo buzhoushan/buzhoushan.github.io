@@ -12,7 +12,7 @@
 
     // document.write(navigator.userAgent);
     function permission() {
-        document.getElementById('real_log').appendChild(document.createTextNode('--'+JSON.stringify(DeviceMotionEvent.requestPermission)+'--'))
+        reallog('--'+JSON.stringify(DeviceMotionEvent.requestPermission)+'--');
         console.log(DeviceMotionEvent.requestPermission)
         if (typeof (DeviceMotionEvent) !== "undefined" && typeof (DeviceMotionEvent.requestPermission) === "function") {
             // (optional) Do something before API request prompt.
@@ -21,45 +21,51 @@
                 .then(response => {
                     document.getElementById('log').innerText = response;
                     document.getElementById('log1').innerText = response;
-                    document.getElementById('real_log').appendChild(document.createTextNode('微信response：'+response));
+                    reallog('微信response：'+response);
                     if (response == "granted") {
                         window.addEventListener('deviceorientation', function (event) {
                             document.getElementById('log').innerText = event.beta;
-                            document.getElementById('real_log').appendChild(document.createTextNode('微信：'+event.beta));
+                            reallog('微信：'+event.beta);
                         });
                     }
                 })
                 .catch(console.error);
         } else {
-            document.getElementById('real_log').appendChild(document.createTextNode('--DeviceMotionEvent is not defined--'));
+            reallog('--DeviceMotionEvent is not defined--');
             alert("DeviceMotionEvent is not defined");
         }
     }
 
     document.getElementById('log1').onclick = function () {
         if (window.DeviceOrientationEvent) {
-            if (navigator.platform==='iPhone'){
-                 document.getElementById('real_log').appendChild(document.createTextNode('--permission--'));
-                 permission();
+            if (navigator.userAgent.indexOf('MicroMessenger/7.0.12') > -1 && navigator.userAgent.indexOf('iPhone OS 13') > -1){
+                permission();
+                reallog('--permission--');
             }
             else {
-                document.getElementById('real_log').appendChild(document.createTextNode('--deviceorientation--'));
+                reallog('--deviceorientation--');
                 try{
                     window.addEventListener('deviceorientation', function (event) {
                         let re = event.beta?event.beta:'木有';
                         document.getElementById('log').innerText = re;
-                        document.getElementById('real_log').appendChild(document.createTextNode('不是微信：' + re));
+                        reallog('不是微信：' + re);
                     });
                 }catch(e){
-                    document.getElementById('real_log').appendChild(document.createTextNode('catch:'+JSON.stringify(e)));
+                    reallog('catch:'+JSON.stringify(e));
                 }
             }
         } else {
-            document.getElementById('real_log').appendChild(document.createTextNode('--你的浏览器不支持陀螺仪--'));
+            reallog('--你的浏览器不支持陀螺仪--');
             document.getElementById('log').innerText = '你的浏览器不支持陀螺仪';
         }
 
     };
+
+    function reallog(log){
+        let p = document.createElement('p');
+        p.innerText = log;
+        document.getElementById('real_log').appendChild(p);
+    }
 
 </script>
 </body>
