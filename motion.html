@@ -12,7 +12,7 @@
 
     // document.write(navigator.userAgent);
     function permission() {
-        reallog('--'+JSON.stringify(DeviceMotionEvent.requestPermission)+'--');
+        reallog(JSON.stringify(DeviceMotionEvent.requestPermission));
         console.log(DeviceMotionEvent.requestPermission)
         if (typeof (DeviceMotionEvent) !== "undefined" && typeof (DeviceMotionEvent.requestPermission) === "function") {
             // (optional) Do something before API request prompt.
@@ -31,7 +31,7 @@
                 })
                 .catch(console.error);
         } else {
-            reallog('--DeviceMotionEvent is not defined--');
+            reallog('DeviceMotionEvent is not defined');
             alert("DeviceMotionEvent is not defined");
         }
     }
@@ -40,11 +40,12 @@
         if (window.DeviceOrientationEvent) {
             if (navigator.userAgent.indexOf('MicroMessenger/7.0.12') > -1 && navigator.userAgent.indexOf('iPhone OS 13') > -1){
                 permission();
-                reallog('--permission--');
+                reallog('permission');
             }
             else {
-                reallog('--deviceorientation--');
+                reallog('deviceorientation');
                 try{
+                    reallog('try in');
                     window.addEventListener('deviceorientation', function (event) {
                         let re = event.beta?event.beta:'木有';
                         document.getElementById('log').innerText = re;
@@ -55,7 +56,7 @@
                 }
             }
         } else {
-            reallog('--你的浏览器不支持陀螺仪--');
+            reallog('你的浏览器不支持陀螺仪');
             document.getElementById('log').innerText = '你的浏览器不支持陀螺仪';
         }
 
