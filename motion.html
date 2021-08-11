@@ -49,7 +49,9 @@
                     window.addEventListener('deviceorientation', function (event) {
                         let re = event.beta?event.beta:'木有';
                         document.getElementById('log').innerText = re;
-                        reallog('不是微信：' + re);
+                        if (re==='木有') {
+                            reallog('不是微信：' + re);
+                        }
                     });
                 }catch(e){
                     reallog('catch:'+JSON.stringify(e));
