@@ -37,6 +37,7 @@
     }
 
     document.getElementById('log1').onclick = function () {
+        document.getElementById('real_log').appendChild(document.createTextNode(navigator.userAgent));
         if (window.DeviceOrientationEvent) {
             if (navigator.userAgent.indexOf('MicroMessenger/7.0.12') > -1 && navigator.userAgent.indexOf('iPhone OS 13') > -1){
                  permission();
