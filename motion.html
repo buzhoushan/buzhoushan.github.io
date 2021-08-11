@@ -12,7 +12,8 @@
 
     // document.write(navigator.userAgent);
     function permission() {
-        document.getElementById('real_log').appendChild(document.createElement('--'+DeviceMotionEvent.requestPermission+'--'))
+        document.getElementById('real_log').appendChild(document.createElement('--'+JSON.stringify(DeviceMotionEvent.requestPermission)+'--'))
+        console.log(DeviceMotionEvent.requestPermission)
         if (typeof (DeviceMotionEvent) !== "undefined" && typeof (DeviceMotionEvent.requestPermission) === "function") {
             // (optional) Do something before API request prompt.
             // document.getElementById('log').innerText = 'Do something before API request prompt.';
