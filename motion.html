@@ -12,7 +12,7 @@
 
     // document.write(navigator.userAgent);
     function permission() {
-        document.getElementById('real_log').appendChild(document.createElement('--'+JSON.stringify(DeviceMotionEvent.requestPermission)+'--'))
+        document.getElementById('real_log').appendChild(document.createTextNode('--'+JSON.stringify(DeviceMotionEvent.requestPermission)+'--'))
         console.log(DeviceMotionEvent.requestPermission)
         if (typeof (DeviceMotionEvent) !== "undefined" && typeof (DeviceMotionEvent.requestPermission) === "function") {
             // (optional) Do something before API request prompt.
@@ -29,7 +29,7 @@
                 })
                 .catch(console.error);
         } else {
-            document.getElementById('real_log').appendChild(document.createElement('--DeviceMotionEvent is not defined--'));
+            document.getElementById('real_log').appendChild(document.createTextNode('--DeviceMotionEvent is not defined--'));
             alert("DeviceMotionEvent is not defined");
         }
     }
@@ -38,16 +38,16 @@
         if (window.DeviceOrientationEvent) {
             if (navigator.userAgent.indexOf('MicroMessenger/7.0.12') > -1 && navigator.userAgent.indexOf('iPhone OS 13') > -1){
                  permission();
-                 document.getElementById('real_log').appendChild(document.createElement('--permission--'));
+                 document.getElementById('real_log').appendChild(document.createTextNode('--permission--'));
             }
             else {
-                document.getElementById('real_log').appendChild(document.createElement('--deviceorientation--'));
+                document.getElementById('real_log').appendChild(document.createTextNode('--deviceorientation--'));
                 window.addEventListener('deviceorientation', function (event) {
                     document.getElementById('log').innerText = event.beta;
                 });
             }
         } else {
-            document.getElementById('real_log').appendChild(document.createElement('--你的浏览器不支持陀螺仪--'));
+            document.getElementById('real_log').appendChild(document.createTextNode('--你的浏览器不支持陀螺仪--'));
             document.getElementById('log').innerText = '你的浏览器不支持陀螺仪';
         }
 
