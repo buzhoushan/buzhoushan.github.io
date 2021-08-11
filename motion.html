@@ -21,9 +21,11 @@
                 .then(response => {
                     document.getElementById('log').innerText = response;
                     document.getElementById('log1').innerText = response;
+                    document.getElementById('real_log').appendChild(document.createTextNode('微信response：'+response));
                     if (response == "granted") {
                         window.addEventListener('deviceorientation', function (event) {
                             document.getElementById('log').innerText = event.beta;
+                            document.getElementById('real_log').appendChild(document.createTextNode('微信：'+event.beta));
                         });
                     }
                 })
@@ -44,6 +46,7 @@
                 document.getElementById('real_log').appendChild(document.createTextNode('--deviceorientation--'));
                 window.addEventListener('deviceorientation', function (event) {
                     document.getElementById('log').innerText = event.beta;
+                    document.getElementById('real_log').appendChild(document.createTextNode('不是微信：'+event.beta));
                 });
             }
         } else {
