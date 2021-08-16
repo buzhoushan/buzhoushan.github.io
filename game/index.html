@@ -416,10 +416,10 @@ games[i]=new Array();
 games[i].name = "欢乐打地鼠";
 // games[i].type= "动作游戏";
 // games[i].score=87;
-games[i].icon = "games/dds/icon.png";
-games[i].ishot = true;
-games[i].src =baseurl+ "games/dds";
-i++;
+// games[i].icon = "games/dds/icon.png";
+// games[i].ishot = true;
+// games[i].src =baseurl+ "games/dds";
+// i++;
 games[i]=new Array();
 games[i].name = "保护老板";
 // games[i].type= "动作游戏";
@@ -3450,7 +3450,7 @@ function draw(){
 		if(!gtype)gtype="休闲竞技";
 		var score=games[i].score;
 		if(!score)score=60;		
-		sr +="<div class='game clearfix'><div class='game-logo'><a href='" + games[i].src + "' target='_blank'><img src='" + games[i].icon + "'></a></div><div class='game-info'><section><p class='title'>" + games[i].name + "</p><p class='des'>有" + (100000+parseInt(Math.random()*1000000)) + "人玩过</p></section><footer class='clearfix'><a href='" + games[i].src + "' target='_blank' class='btn-play'>开始游戏</a><div class='qr-wrap'><span class='qr'></span><div class='game-qr'></div></div></footer></div></div>";
+		sr +="<div class='game clearfix'><div class='game-logo'><a href='" + games[i].src + "' target='_blank'><img data-src='" + games[i].icon + "'></a></div><div class='game-info'><section><p class='title'>" + games[i].name + "</p><p class='des'>有" + (100000+parseInt(Math.random()*1000000)) + "人玩过</p></section><footer class='clearfix'><a href='" + games[i].src + "' target='_blank' class='btn-play'>开始游戏</a><div class='qr-wrap'><span class='qr'></span><div class='game-qr'></div></div></footer></div></div>";
 
 	}
 	
@@ -3469,6 +3469,52 @@ $(document).on('mouseover','.qr-wrap',function(){
 	}
 	$(this).find('.game-qr').qrcode({width: 120,height: 120,text: $(this).prev().attr('href')});
 })
+window.onload = function(){
+	// 获取图片列表，即img标签列表
+	var imgs = document.querySelectorAll('.game img');
+
+	// 获取到浏览器顶部的距离
+	function getTop(e){
+		return e.offsetTop;
+	}
+
+	// 懒加载实现
+	function lazyload(imgs){
+		// 可视区域高度
+		var h = window.innerHeight;
+		//滚动区域高度
+		var s = document.documentElement.scrollTop || document.body.scrollTop;
+		for(var i=0;i<imgs.length;i++){
+			if (imgs[i].src) {
+				continue;
+			}
+			//图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
+			if ((h+s)>getTop(imgs[i])) {
+				// 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
+				(function(i){
+					setTimeout(function(){
+						// 不加立即执行函数i会等于9
+						// 隐形加载图片或其他资源，
+						//创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
+						var temp = new Image();
+						temp.src = imgs[i].getAttribute('data-src');//只会请求一次
+						// onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
+						temp.onload = function(){
+							// 获取自定义属性data-src，用真图片替换假图片
+							imgs[i].src = imgs[i].getAttribute('data-src')
+						}
+					},2)
+				})(i)
+			}
+		}
+	}
+	lazyload(imgs);
+
+	// 滚屏函数
+	window.onscroll =function(){
+		lazyload(imgs);
+	}
+}
 </script>
 <div id="loading" onClick="draw();">
             <span style="font-size:16px;">查看更多...</span>
