@@ -13,6 +13,8 @@
 <meta name="baidu-site-verification" content="yu3S6qg3OZ" />
 <link rel="stylesheet" type="text/css" href="index5/main.min.css?v=1020">
 <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<!-- <script src="index/js/jquery.qrcode.min.js"></script> -->
+<script src="https://www.jq22.com/js/jquery.qrcode.min.js"></script>
 </head>
 <body>
 <div class="hide">
@@ -3448,7 +3450,7 @@ function draw(){
 		if(!gtype)gtype="休闲竞技";
 		var score=games[i].score;
 		if(!score)score=60;		
-		sr +="<div class='game clearfix'><div class='game-logo'><a href='" + games[i].src + "' target='_blank'><img src='" + games[i].icon + "'></a></div><div class='game-info'><section><p class='title'>" + games[i].name + "</p><p class='des'>有" + (100000+parseInt(Math.random()*1000000)) + "人玩过</p></section><footer class='clearfix'><a href='" + games[i].src + "' target='_blank' class='btn-play'>开始游戏</a><div class='qr-wrap'><span class='qr'></span><div class='game-qr'><img src='http://s.jiathis.com/qrcode.php?url="+encodeURIComponent(games[i].src)+"'></div></div></footer></div></div>";
+		sr +="<div class='game clearfix'><div class='game-logo'><a href='" + games[i].src + "' target='_blank'><img src='" + games[i].icon + "'></a></div><div class='game-info'><section><p class='title'>" + games[i].name + "</p><p class='des'>有" + (100000+parseInt(Math.random()*1000000)) + "人玩过</p></section><footer class='clearfix'><a href='" + games[i].src + "' target='_blank' class='btn-play'>开始游戏</a><div class='qr-wrap'><span class='qr'></span><div class='game-qr'></div></div></footer></div></div>";
 
 	}
 	
@@ -3461,6 +3463,12 @@ function draw(){
 
 }
 draw();
+$(document).on('mouseover','.qr-wrap',function(){
+	if ($(this).find('.game-qr canvas').length) {
+		return;
+	}
+	$(this).find('.game-qr').qrcode({width: 120,height: 120,text: $(this).prev().attr('href')});
+})
 </script>
 <div id="loading" onClick="draw();">
             <span style="font-size:16px;">查看更多...</span>
