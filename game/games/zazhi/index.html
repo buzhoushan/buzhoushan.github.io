@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta charset="utf-8" />
 <title>千万别来南宁</title>
 <meta name="apple-touch-fullscreen" content="yes" />
@@ -199,7 +200,7 @@ dataForWeixin = {
     img_url: './success/images/zazhi.png',
     img_width: '100',
     img_height: '100',
-    link: 'https://buzhoushan.github.io/game/games/zazhi/index.html',
+    link: 'https://test.buzhoushan.top/game/games/zazhi/index.html',
     title: '我是认真的，千万不要来南宁',
     desc: "我是认真的，千万不要来南宁",
     callback:function(){document.location.href = mebtnopenurl;}
@@ -222,7 +223,7 @@ $('#postinfo_btn').bind('click', function(){
     };
     $.ajax({
 		type : 'POST',
-		url : 'https://buzhoushan.github.io/game/',
+		url : 'https://test.buzhoushan.top/game/',
 		data : params,
 		dataType : 'json',
 		success : function(response) {

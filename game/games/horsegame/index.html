@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>DNF爱的守护者 跳圈圈</title>
     <meta name="viewport" content="width=device-width,user-scalable=no"/>
     <meta charset="utf-8"/>

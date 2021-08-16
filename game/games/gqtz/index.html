@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <title>哥，挺住18秒！躲开条子</title>
     <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
@@ -96,12 +97,12 @@
         /*var curWwwPath = window.document.location.href;
         var path = curWwwPath.substring(0,curWwwPath.lastIndexOf('/'));*/
         //return (path + "/a.html"+"?r="+curWwwPath+"?act=weixin_link");
-        return ("https://buzhoushan.github.io/game/games/gqtz");
+        return ("https://test.buzhoushan.top/game/games/gqtz");
     }
 
     var lineLink = getShareUrlPath();
     var shareTitle = '哥，挺住18秒！躲开条子';
-    var shareCallback = "https://buzhoushan.github.io/game/";
+    var shareCallback = "https://test.buzhoushan.top/game/";
 
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 

@@ -40,7 +40,7 @@ function getQueryString(name) {
 }
 
 
-//微信分享需引用<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+//微信分享需引用<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 var shareUrl = location.href;
 var imgUrl = shareUrl.replace(/(index\.html)|(share\.html)/, 'images/share.jpg');
 if (imgUrl.indexOf('images/share.jpg') == -1)

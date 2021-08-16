@@ -19,7 +19,7 @@ GameLeBi = function(gameid, cpid) {
     this.shareDomain = null;
     this.shareDomains = ["dm15.net", "dm15.com"];
     this.shareData = {
-        imgurl: "https://buzhoushan.github.io/game/img/icon.png",
+        imgurl: "https://test.buzhoushan.top/game/img/icon.png",
         link: this.baseurl,
         title: "乐比游戏",
         content: "乐比游戏"
@@ -65,7 +65,7 @@ GameLeBi.prototype.init = function() {
 GameLeBi.prototype.initGame = function() {
     var _this = this;
     this.gameurl = "/?gameid=" + this.gameid + (this.spid ? "&spid=" + this.spid: "") + (localStorage.myuid ? "&id=" + localStorage.myuid: "") + "&f=zf" + "&domain=" + this.shareDomain;
-    this.shareData.imgurl = "https://buzhoushan.github.io/game/" + this.gameid + "/icon.png";
+    this.shareData.imgurl = "https://test.buzhoushan.top/game/" + this.gameid + "/icon.png";
     this.shareData.link = "http://" + parseInt(Math.random()*100000) + "." + this.gameid + "." + this.shareDomain + "/" + this.gameid;
     this.utils.loading();
     if (!this.spid || this.spid == "uc" || this.spid == "9g") {
@@ -101,7 +101,7 @@ GameLeBi.prototype.initGame = function() {
 };
 GameLeBi.prototype.connect = function() {
     if (localStorage.accessToken) {
-        var url = "https://buzhoushan.github.io/game/connect2?gameid=" + this.gameid + "&access_token=" + localStorage.accessToken + (this.spid ? "&spid=" + this.spid: "") + (this.fromid ? "&uid=" + this.fromid: "");
+        var url = "https://test.buzhoushan.top/game/connect2?gameid=" + this.gameid + "&access_token=" + localStorage.accessToken + (this.spid ? "&spid=" + this.spid: "") + (this.fromid ? "&uid=" + this.fromid: "");
         var _this = this;
         this.utils.ajax(url,
         function(data) {
@@ -115,7 +115,7 @@ GameLeBi.prototype.connect = function() {
             }
         })
     } else {
-        var url = "https://buzhoushan.github.io/game/connect3.php?gameid=" + this.gameid + (this.spid ? "&spid=" + this.spid: "") + (this.utils.getParameter("f") == "zf" ? "&f=zf": "");
+        var url = "https://test.buzhoushan.top/game/connect3.php?gameid=" + this.gameid + (this.spid ? "&spid=" + this.spid: "") + (this.utils.getParameter("f") == "zf" ? "&f=zf": "");
         var _this = this;
         this.utils.ajax(url,
         function(data) {
@@ -152,13 +152,13 @@ GameLeBi.prototype.bonus = function() {
     }
 };
 GameLeBi.prototype.getGameInfo = function(gameid, callback) {
-    this.utils.ajax("https://buzhoushan.github.io/game/gameinfo?gameid=" + gameid, callback)
+    this.utils.ajax("https://test.buzhoushan.top/game/gameinfo?gameid=" + gameid, callback)
 };
 GameLeBi.prototype.getEventUrl = function() {
     return this.baseurl + "/app/event.html?r=" + Math.random()
 };
 GameLeBi.prototype.getEventToday = function(callback) {
-    var url = "https://buzhoushan.github.io/game/getevent?gameid=" + this.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid: "");
+    var url = "https://test.buzhoushan.top/game/getevent?gameid=" + this.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid: "");
     var _this = this;
     this.utils.ajax(url,
     function(data) {
@@ -180,7 +180,7 @@ GameLeBi.prototype.share = function() {
     this.app && this.app.share()
 };
 GameLeBi.prototype.shareLog = function(options, callback) {
-    var url = "https://buzhoushan.github.io/game/gameshare";
+    var url = "https://test.buzhoushan.top/game/gameshare";
     if (options.gameid) url = this.utils.setParameter(url, "gameid", options.gameid);
     if (options.spid) url = this.utils.setParameter(url, "spid", options.spid);
     if (options.id) url = this.utils.setParameter(url, "id", options.id);
@@ -264,7 +264,7 @@ GameLeBi.prototype.submit = function(callback) {
     var pklastuser = (this.pklastuser ? "y": "");
     var a = [this.gameid, localStorage.myuid, this.score, encodeURIComponent(this.scoreName), encodeURIComponent(this.shareData.title), pkuid, notice, pklastuser];
     var data = Base64.encode(this.utils.encrypt("gamelebicom2014123", a.join("|")));
-    var url = "https://buzhoushan.github.io/game/submit?data=" + data;
+    var url = "https://test.buzhoushan.top/game/submit?data=" + data;
     var _this = this;
     this.utils.ajax(url,
     function(data) {
@@ -303,7 +303,7 @@ GameLeBiAuth.prototype.check = function(options) {
     } else if (options.level == "user" && !localStorage.token) {
         this.checkTask(options)
     } else {
-        var url = "https://buzhoushan.github.io/game/check";
+        var url = "https://test.buzhoushan.top/game/check";
         if (options.level == "id") url += "?access_token=" + localStorage.accessToken;
         if (options.level == "user") url += "?token=" + localStorage.token;
         var _this = this;
@@ -380,7 +380,7 @@ GameLeBiAuth.prototype.getUser = function(callback) {
         callback && callback.call(null, null)
     } else {
         var _this = this;
-        var url = "https://buzhoushan.github.io/game/getuser?token=" + localStorage.token;
+        var url = "https://test.buzhoushan.top/game/getuser?token=" + localStorage.token;
         this.gamelebi.utils.ajax(url,
         function(data) {
             if (data.errcode) {
@@ -409,7 +409,7 @@ GameLeBiAuth.prototype.getFromUser = function() {
     };
     if (id) {
         var _this = this;
-        var url = "https://buzhoushan.github.io/game/getuser?id=" + id;
+        var url = "https://test.buzhoushan.top/game/getuser?id=" + id;
         this.gamelebi.utils.ajax(url,
         function(data) {
             var user = null;
@@ -427,14 +427,14 @@ GameLeBiAuth.prototype.getFromUser = function() {
 };
 GameLeBiAuth.prototype.loginWx = function(redirect) {
     var trans = this.gamelebi.baseurl + "/auth/trans.app.html?origin=" + encodeURIComponent(redirect);
-    var url = "https://buzhoushan.github.io/game/check?fromurl=" + encodeURIComponent(trans);
+    var url = "https://test.buzhoushan.top/game/check?fromurl=" + encodeURIComponent(trans);
     window.location = url
 };
 GameLeBiAuth.prototype.registerWx = function(redirect) {
     var trans = this.gamelebi.baseurl + "/auth/trans.app.html?origin=" + encodeURIComponent(redirect);
-    var success = "https://buzhoushan.github.io/game/check?fromurl=" + encodeURIComponent(trans);
+    var success = "https://test.buzhoushan.top/game/check?fromurl=" + encodeURIComponent(trans);
     var fail = this.gamelebi.baseurl + "/app/games.html";
-    var url = "https://buzhoushan.github.io/game/getuser?success=" + encodeURIComponent(success) + "&fail=" + encodeURIComponent(fail);
+    var url = "https://test.buzhoushan.top/game/getuser?success=" + encodeURIComponent(success) + "&fail=" + encodeURIComponent(fail);
     window.location = url
 };
 GameLeBiAuth.prototype.loginForm = function(redirect) {
@@ -444,7 +444,7 @@ GameLeBiAuth.prototype.loginForm = function(redirect) {
 GameLeBiAuth.prototype.saveLink = function(callback) {
     var id = this.gamelebi.fromid;
     if (id && localStorage.accessToken && id != localStorage.myuid) {
-        var url = "https://buzhoushan.github.io/game/link?access_token=" + localStorage.accessToken + "&id=" + id;
+        var url = "https://test.buzhoushan.top/game/link?access_token=" + localStorage.accessToken + "&id=" + id;
         var _this = this;
         this.gamelebi.utils.ajax(url,
         function(data) {
@@ -602,14 +602,14 @@ GameLeBiUtils.prototype.removeParameter = function(url, name) {
     return url
 };
 GameLeBiUtils.prototype.getHead64 = function(headimgurl) {
-    if (!headimgurl) return "https://buzhoushan.github.io/game/default.png";
+    if (!headimgurl) return "https://test.buzhoushan.top/game/default.png";
     if (headimgurl.indexOf("/0") != -1) {
         headimgurl = headimgurl.substr(0, headimgurl.length - 2) + "/64"
     };
     return headimgurl
 };
 GameLeBiUtils.prototype.getHead132 = function(headimgurl) {
-    if (!headimgurl) return "https://buzhoushan.github.io/game/default.png";
+    if (!headimgurl) return "https://test.buzhoushan.top/game/default.png";
     if (headimgurl.indexOf("/0") != -1) {
         headimgurl = headimgurl.substr(0, headimgurl.length - 2) + "/132"
     };
@@ -931,7 +931,7 @@ GameLeBiUtils.prototype.showAd = function() {
                             var tip = document.createElement("img");
                             tip.id = "gamelebizhongsoutip";
                             tip.className = "gamelebizhongsoutip";
-                            tip.src = "https://buzhoushan.github.io/game/img/" + (_this.isIOS() ? "zhongsou_share_ios.png": "zhongsou_share_android.png");
+                            tip.src = "https://test.buzhoushan.top/game/img/" + (_this.isIOS() ? "zhongsou_share_ios.png": "zhongsou_share_android.png");
                             document.getElementsByTagName("body")[0].appendChild(tip)
                         } else {
                             window.location = "wx360a9785675a8653://"
@@ -1102,7 +1102,7 @@ GameLeBiWx.prototype.initJsApi = function() {
     var timestamp = this.gamelebi.utils.now();
     var noncestr = this.gamelebi.utils.getRandomString(16);
     var url = this.gamelebi.utils.getFullUrl();
-    var ajaxUrl = "https://buzhoushan.github.io/game/getjsapisignature/?noncestr=" + noncestr + "&timestamp=" + timestamp + "&url=" + encodeURIComponent(url);
+    var ajaxUrl = "https://test.buzhoushan.top/game/getjsapisignature/?noncestr=" + noncestr + "&timestamp=" + timestamp + "&url=" + encodeURIComponent(url);
     var _this = this;
     this.gamelebi.utils.ajax(ajaxUrl,
     function(data) {
@@ -1272,8 +1272,8 @@ GameLeBiUC.prototype.createIconImage = function() {
     if (!img) {
         img = document.createElement("img");
         img.id = "gamelebiucicon";
-        if (this.gamelebi.gameid) img.src = "https://buzhoushan.github.io/game/" + this.gamelebi.gameid + "/icon.png";
-        else img.src = "https://buzhoushan.github.io/game/img/icon.png";
+        if (this.gamelebi.gameid) img.src = "https://test.buzhoushan.top/game/" + this.gamelebi.gameid + "/icon.png";
+        else img.src = "https://test.buzhoushan.top/game/img/icon.png";
         img.className = "gamelebiucicon";
         document.getElementsByTagName("body")[0].appendChild(img)
     }

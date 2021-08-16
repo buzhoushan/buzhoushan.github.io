@@ -11,8 +11,8 @@ Auth9G = function(gameid) {
 	this.identify = function(){};
 	this.ready = function(){};
 	this.readyDone = false;
-	this.baseUrl = "https://buzhoushan.github.io/game/";
-	this.gameUrl = "https://buzhoushan.github.io/game/";
+	this.baseUrl = "https://test.buzhoushan.top/game/";
+	this.gameUrl = "https://test.buzhoushan.top/game/";
 	this.init();
 }
 

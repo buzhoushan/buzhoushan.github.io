@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta charset="utf-8" />
 <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
 
@@ -128,8 +129,8 @@ var dsp=new Array("=0",
 <script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/qwt.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/qwt/",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/qwt.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/qwt/",
 		        "tTitle": "青蛙跳",
 		        "tContent": "青蛙跳"
 		};
@@ -189,7 +190,7 @@ var dsp=new Array("=0",
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "qwt" };
-			//window.shareData.timeLineLink = "https://buzhoushan.github.io/game/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			//window.shareData.timeLineLink = "https://test.buzhoushan.top/game/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName = score+"米";
@@ -203,7 +204,7 @@ var dsp=new Array("=0",
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到游戏排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/game/games/qwt/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "https://test.buzhoushan.top/game/games/qwt/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;

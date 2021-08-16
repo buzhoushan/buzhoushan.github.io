@@ -10201,7 +10201,8 @@ function Mc(h) {
 		this.nt.appendChild(this.Ag);
 		this.On = this.Ag.contentWindow.document;
 		this.On.open();
-		this.On.write("<html><head></head><body><style>body{-webkit-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -webkit-transform-origin: 0 0;-moz-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -moz-transform-origin: 0 0;-o-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -o-transform-origin: 0 0;-ms-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -ms-transform-origin: 0 0;margin:0;padding:0; overflow:hidden; float: _none; height: " + jQuery(this.M.id).height() + "px; width:" + jQuery(this.M.id).width() + "px;}</style>" + this.Jx + "</body></html>");
+		this.On.write("<html><head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests"></head><body><style>body{-webkit-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -webkit-transform-origin: 0 0;-moz-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -moz-transform-origin: 0 0;-o-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -o-transform-origin: 0 0;-ms-transform: scale(" + jQuery(this.M).width() / this.width * this.pn + "); -ms-transform-origin: 0 0;margin:0;padding:0; overflow:hidden; float: _none; height: " + jQuery(this.M.id).height() + "px; width:" + jQuery(this.M.id).width() + "px;}</style>" + this.Jx + "</body></html>");
 		this.On.close();
 		this.n.Xh(this)*/
 	};
@@ -10329,7 +10330,8 @@ function Mc(h) {
 		e.appendChild(d);
 		e = d.contentWindow.document;
 		e.open();
-		e.write("<html><head></head><body><style>html,body{zoom:" + Math.sqrt(jQuery(this.M).width() / this.width * a) + "; margin:0;padding:0; overflow:hidden; background-color: #3366CC; float: left; width: 300px;}</style>" + h + "</body></html>");
+		e.write("<html><head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests"></head><body><style>html,body{zoom:" + Math.sqrt(jQuery(this.M).width() / this.width * a) + "; margin:0;padding:0; overflow:hidden; background-color: #3366CC; float: left; width: 300px;}</style>" + h + "</body></html>");
 		e.close()
 	};
 	h.j = {};

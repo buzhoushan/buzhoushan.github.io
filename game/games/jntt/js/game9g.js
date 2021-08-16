@@ -26,10 +26,10 @@ Game9G = function(gameid) {
 Game9G.prototype.init = function() {
 	this.spid = this.utils.getParameter("spid");
 	this.homeurl = "http://mp.weixin.qq.com/s?__biz=MzI4MjA2MjE0MQ==&mid=246005295&idx=1&sn=490f8141976d607ba079d48f52a3fcd7#rd";
-	this.gzurl = "https://buzhoushan.github.io/game/";
+	this.gzurl = "https://test.buzhoushan.top/game/";
 	this.shareDomain = this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
 	this.shareData.imgurl = "http://mmbiz.qpic.cn/mmbiz/2zpp2iaH4HWFLKICz9wUUiaVPxth06HtfXc8iaWHgpVDxFUsxPXqWxLkpDvQJBYAiaFCVG92licAdl93g3MJannYyyg/640";
-	this.shareData.link = "https://buzhoushan.github.io/game/games/jntt/";
+	this.shareData.link = "https://test.buzhoushan.top/game/games/jntt/";
 	switch (this.utils.getAppType()) {
 		case "wx":
 			this.app = new Game9GWx(this);

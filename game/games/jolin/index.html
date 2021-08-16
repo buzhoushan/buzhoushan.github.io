@@ -1,6 +1,7 @@
 
 <html>
 	<head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui">
 			<meta http-equiv="pragma" content="no-cache">
@@ -63,8 +64,8 @@
 	<script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/jolin.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/jolin",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/jolin.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/jolin",
 		        "tTitle": "一起寻找蔡依林，众多凤姐里找蔡依林，我果然是火眼金睛呀!",
 		        "tContent": "一起寻找蔡依林，众多凤姐里找蔡依林，我果然是火眼金睛呀!"
 		};
@@ -74,7 +75,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "https://buzhoushan.github.io/game/";
+				window.location = "https://test.buzhoushan.top/game/";
 			 }
 			 else{
 				goHome();
@@ -119,7 +120,7 @@
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "djyqlzmz" };
-			//window.shareData.timeLineLink = "https://buzhoushan.github.io/game/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			//window.shareData.timeLineLink = "https://test.buzhoushan.top/game/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName ="找到"+score+"次蔡依林";

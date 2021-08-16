@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html>
-<head><title>404 Not Found</title></head>
+<head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests"><title>404 Not Found</title></head>
 <body bgcolor="white">
 <h1>404 Not Found</h1>
 <p>The requested URL was not found on this server. Sorry for the inconvenience.<br/>

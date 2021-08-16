@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>手机捉鬼 微信HTML5在线朋友圈游戏</title>
         
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -120,25 +121,25 @@
           document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
                 WeixinJSBridge.on('menu:share:appmessage', function(argv) {
                     WeixinJSBridge.invoke('sendAppMessage', {
-                        "img_url": "https://buzhoushan.github.io/game/games/zhuogui/logo.png",
-                        "link": "https://buzhoushan.github.io/game/games/zhuogui/index.html",
+                        "img_url": "https://test.buzhoushan.top/game/games/zhuogui/logo.png",
+                        "link": "https://test.buzhoushan.top/game/games/zhuogui/index.html",
                         "desc": "鬼节到了，我的手机见鬼了！！胆大的快来帮忙抓鬼啊！！",
                         "title": title
                     }, function(res) {
-                        document.location.href = "https://buzhoushan.github.io/game/";
+                        document.location.href = "https://test.buzhoushan.top/game/";
                     })
                 });
 
                 WeixinJSBridge.on('menu:share:timeline', function(argv) {
                     WeixinJSBridge.invoke('shareTimeline', {
-                        "img_url": "https://buzhoushan.github.io/game/games/zhuogui/logo.png",
+                        "img_url": "https://test.buzhoushan.top/game/games/zhuogui/logo.png",
                         "img_width": "120",
                         "img_height": "120",
-                        "link": "https://buzhoushan.github.io/game/games/zhuogui/index.html",
+                        "link": "https://test.buzhoushan.top/game/games/zhuogui/index.html",
                         "desc": "鬼节到了，我的手机见鬼了！！胆大的快来帮忙抓鬼啊！！",
                         "title": title
                     }, function(res) {
-                        document.location.href = "https://buzhoushan.github.io/game/";
+                        document.location.href = "https://test.buzhoushan.top/game/";
                     });
                 });
             }, false);

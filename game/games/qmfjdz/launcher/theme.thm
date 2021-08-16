@@ -1,5 +1,6 @@
 <html>
-<head><title>404 Not Found</title></head>
+<head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests"><title>404 Not Found</title></head>
 <body bgcolor="white">
 <center><h1>404 Not Found</h1></center>
 <hr><center>nginx</center>

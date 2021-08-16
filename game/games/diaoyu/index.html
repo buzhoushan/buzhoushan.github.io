@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://androidzh.com/games/diaoyu/?shouyoutu -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" type="image/GIF" href="favicon.ico">
@@ -25,7 +26,7 @@
                   cc.view.resizeWithBrowserSize(true);
                   cc.director.setDisplayStats(cc.game.config.showFPS);
                   //load resources
-                  cc._loaderImage = "https://buzhoushan.github.io/game/games/diaoyu/kiss.jpg";
+                  cc._loaderImage = "https://test.buzhoushan.top/game/games/diaoyu/kiss.jpg";
                   cc.LoaderScene.preload(["res/imgs.js", "res/imgs.png"], function () {
                     cc.spriteFrameCache.addSpriteFrames('res/imgs.js', 'res/imgs.png');
                     cc.director.runScene(new HelloWorldScene());

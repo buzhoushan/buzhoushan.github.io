@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta charset="UTF-8">
 
 	<title>戳泡泡</title>
@@ -109,8 +110,8 @@
 <script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/cpp.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/cpp/",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/cpp.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/cpp/",
 		        "tTitle": "戳泡泡",
 		        "tContent": "戳泡泡"
 		};
@@ -170,7 +171,7 @@
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "cpp" };
-			window.shareData.timeLineLink = "https://buzhoushan.github.io/game/index.html" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			window.shareData.timeLineLink = "https://test.buzhoushan.top/game/index.html" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName = "戳了"+score+"分";

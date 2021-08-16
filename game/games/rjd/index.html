@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport"
 			content="initial-scale=1 maximum-scale=1 user-scalable=0" />
@@ -11,7 +12,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<title>抛鸡蛋</title>
 		<script type="text/javascript">
-		var _config = {}; _config['isSite'] = 'https://buzhoushan.github.io/game/';_config["isCount"] = "https://buzhoushan.github.io/game/";_config["isSites"] = "https://buzhoushan.github.io/game/";
+		var _config = {}; _config['isSite'] = 'https://test.buzhoushan.top/game/';_config["isCount"] = "https://test.buzhoushan.top/game/";_config["isSites"] = "https://test.buzhoushan.top/game/";
 		var _con = {}; _con["num"] = 70;
 	</script>
 		<script type="text/javascript"
@@ -453,8 +454,8 @@ input[type=checkbox] {
 		<script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/rjd.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/rjd/",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/rjd.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/rjd/",
 		        "tTitle": "抛鸡蛋-空中传媒",
 		        "tContent": "抛鸡蛋-空中传媒"
 		};
@@ -514,7 +515,7 @@ input[type=checkbox] {
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "rjd" };
-			//window.shareData.timeLineLink = "https://buzhoushan.github.io/game/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			//window.shareData.timeLineLink = "https://test.buzhoushan.top/game/gamecenter.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName = "拯救了"+score+"颗蛋";
@@ -528,7 +529,7 @@ input[type=checkbox] {
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到游戏排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/game/games/rjd/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "https://test.buzhoushan.top/game/games/rjd/index.html" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;

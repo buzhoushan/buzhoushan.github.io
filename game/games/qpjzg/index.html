@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no width=device-width">
     <title>火爆朋友圈</title>
@@ -41,10 +42,10 @@
     </div>
      <script type="text/paperscript" canvas="canvas" src="js/game.min.js"></script>
     <script language=javascript>
-		var mebtnopenurl = 'https://buzhoushan.github.io/game/games/qpjzg/';
+		var mebtnopenurl = 'https://test.buzhoushan.top/game/games/qpjzg/';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/qpjzg.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/qpjzg/",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/qpjzg.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/qpjzg/",
 		        "tTitle": "强迫症患者",
 		        "tContent": "强迫症患者"
 		};
@@ -54,7 +55,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "https://buzhoushan.github.io/game/";
+				window.location = "https://test.buzhoushan.top/game/";
 			 }
 			 else{
 				goHome();
@@ -97,14 +98,14 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://buzhoushan.github.io/game/icon/qpjzg.png"
+			<img width=100% src="https://test.buzhoushan.top/game/icon/qpjzg.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "qpzhz" };
-			window.shareData.timeLineLink = "https://buzhoushan.github.io/game/games/qpjzg" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+			window.shareData.timeLineLink = "https://test.buzhoushan.top/game/games/qpjzg" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score*100;
 				myData.scoreName ="坚持了"+ score+"秒";

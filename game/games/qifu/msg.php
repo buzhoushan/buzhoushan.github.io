@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable"/>
 	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>

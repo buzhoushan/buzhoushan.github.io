@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta charset="UTF-8">
 	<meta content="yes" name="apple-mobile-web-app-capable"/>
 	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
@@ -121,11 +122,11 @@ $(window).ready(function() {
 });
 
 
-HOME_PATH="https://buzhoushan.github.io/game/";
+HOME_PATH="https://test.buzhoushan.top/game/";
 mebtnopenurl=HOME_PATH;
 window.shareData = {
 		"imgUrl": "./img/share.jpg",
-		"timeLineLink": "https://buzhoushan.github.io/game/games/qifu/msg.php?name="+name+'&address='+address+'&num='+num,
+		"timeLineLink": "https://test.buzhoushan.top/game/games/qifu/msg.php?name="+name+'&address='+address+'&num='+num,
 		"tTitle":"" ,
 		"tContent": "为云南鲁甸县祈福，为灾区的所有同胞祈福！"
 };
@@ -135,7 +136,7 @@ document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
     WeixinJSBridge.on('menu:share:appmessage', function(argv) {
         WeixinJSBridge.invoke('sendAppMessage', {
             "img_url": window.shareData.imgUrl,
-            "link": ' https://buzhoushan.github.io/game/games/qifu/msg.php?mame='+name+'&address='+address+'&num='+num,
+            "link": ' https://test.buzhoushan.top/game/games/qifu/msg.php?mame='+name+'&address='+address+'&num='+num,
             "desc": window.shareData.tContent,
             "title": window.shareData.tTitle
         }, function(res) {
@@ -148,7 +149,7 @@ document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
             "img_url": window.shareData.imgUrl,
             "img_width": "640",
             "img_height": "640",
-            "link": ' https://buzhoushan.github.io/game/games/qifu/msg.php?name='+name+'&address='+address+'&num='+num,
+            "link": ' https://test.buzhoushan.top/game/games/qifu/msg.php?name='+name+'&address='+address+'&num='+num,
             "desc": window.shareData.tContent,
             "title": "我叫"+name+"，我来自"+address+'，我是第'+num+'位为灾区祈福的人'
         }, function(res) {

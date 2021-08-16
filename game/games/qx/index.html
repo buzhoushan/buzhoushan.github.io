@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 <div id='wx_pic' style='margin:0 auto;display:none;'>
 <img src='photo.jpg' />
 </div>
@@ -30,8 +31,8 @@ function submitScore(m,t){
 }
 
 window.shareData = {
-    "imgUrl": "https://buzhoushan.github.io/game/games/qixi1/images/logo.png",
-    "timeLineLink": "https://buzhoushan.github.io/game/games/qixi1/",
+    "imgUrl": "https://test.buzhoushan.top/game/games/qixi1/images/logo.png",
+    "timeLineLink": "https://test.buzhoushan.top/game/games/qixi1/",
     "tTitle": "坚持住，牛郎！织女靠你了！",
     "tContent": "帮助牛郎织女越过重重障碍。"
 };
@@ -40,12 +41,12 @@ function shareGame(t){
     dp_share(t);
 }
 
-    var mebtnopenurl = 'http://https://buzhoushan.github.io/game/';
+    var mebtnopenurl = 'http://https://test.buzhoushan.top/game/';
 
     function goHome()
     {
       window.location =
-        "https://buzhoushan.github.io/game/games/qixi1/";
+        "https://test.buzhoushan.top/game/games/qixi1/";
     }
 
     function onShareComplete(res)

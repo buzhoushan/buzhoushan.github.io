@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="zh-CN">
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <title>Enjoy fireworks</title> 
-	<script type="text/javascript" src="https://buzhoushan.github.io/game/games/qw/jquery.min.js"></script>
+	<script type="text/javascript" src="https://test.buzhoushan.top/game/games/qw/jquery.min.js"></script>
       <script type="text/javascript">
 	  
         var dataForWeixin = {
               appId: "gh_ff79a97cd7f3",
-              TLImg: "https://buzhoushan.github.io/game/games/yh/logo.jpg",
-              url: "https://buzhoushan.github.io/game/games/yh/en/",
+              TLImg: "https://test.buzhoushan.top/game/games/yh/logo.jpg",
+              url: "https://test.buzhoushan.top/game/games/yh/en/",
               title: "Lonely fireworks shows, if you feel good, please share the wechat！",
               desc: "Lonely fireworks shows, if you feel good, please share the wechat！"
         };
@@ -28,7 +29,7 @@
                     "title": infos + dataForWeixin.title,
                     "desc": dataForWeixin.desc 
                 });
-         setTimeout(function () {location.href = "https://buzhoushan.github.io/game/games/yh/en/";}, 1500); 
+         setTimeout(function () {location.href = "https://test.buzhoushan.top/game/games/yh/en/";}, 1500); 
             });
             WeixinJSBridge.on('menu:share:timeline', function(argv){
                 var infos = $("#infos").text();             
@@ -41,7 +42,7 @@
                     "title": infos + dataForWeixin.title,
                     "desc": dataForWeixin.desc
                 });
-		setTimeout(function () {location.href = "https://buzhoushan.github.io/game/games/yh/en/";}, 1500);  
+		setTimeout(function () {location.href = "https://test.buzhoushan.top/game/games/yh/en/";}, 1500);  
             });
         };
         if(document.addEventListener){

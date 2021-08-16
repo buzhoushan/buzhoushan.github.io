@@ -3,6 +3,7 @@
 <!--<html xmlns="http://www.w3.org/1999/xhtml" manifest="touch.manifest">-->
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="-1" />
@@ -56,8 +57,8 @@
  <script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/ymhddzc.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/ymhddzc",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/ymhddzc.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/ymhddzc",
 		        "tTitle": "樱木花道的主场-空中传媒",
 		        "tContent": "樱木花道的主场-空中传媒"
 		};
@@ -67,7 +68,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "https://buzhoushan.github.io/game/games/ymhddzc";
+				window.location = "https://test.buzhoushan.top/game/games/ymhddzc";
 			 }
 			 else{
 				goHome();
@@ -110,7 +111,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://buzhoushan.github.io/game/games/ymhddzc/share.png"
+			<img width=100% src="https://test.buzhoushan.top/game/games/ymhddzc/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -118,7 +119,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "ymhddzc" };
             var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink ="https://buzhoushan.github.io/game/games/ymhddzc";
+			window.shareData.timeLineLink ="https://test.buzhoushan.top/game/games/ymhddzc";
 			function dp_submitScore(score){
 				myData.score = parseInt(score);
 				myData.scoreName ="投进"+score+"球";
@@ -132,7 +133,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到空中传媒排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/game/";
+                            window.location = "https://test.buzhoushan.top/game/";
                         }
                         else {
                             document.location.href = mebtnopenurl;

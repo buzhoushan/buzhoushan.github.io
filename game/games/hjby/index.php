@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <title>火贱兔奔月</title>
     <meta name="viewport"

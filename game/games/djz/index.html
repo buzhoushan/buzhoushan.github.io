@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content = "width=320, maximum-scale=1.0, user-scalable=no" />
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>打击者-空中传媒</title>
 <link rel="stylesheet" href="css/css.css" type="text/css"/>
 </head>
@@ -27,8 +28,8 @@ var Attack = new game($("myCanvas"));
 <script language=javascript>
 		var mebtnopenurl = 'http://mp.weixin.qq.com/s?__biz=MzI4MjA2MjE0MQ==&mid=246005295&idx=1&sn=490f8141976d607ba079d48f52a3fcd7#rd';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/games/djz/icon.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/djz/index.html",
+		        "imgUrl": "https://test.buzhoushan.top/game/games/djz/icon.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/djz/index.html",
 		        "tTitle": "打击者",
 		        "tContent": "打击者"
 		};
@@ -38,7 +39,7 @@ var Attack = new game($("myCanvas"));
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("f=zf",1)>0){
-				window.location = "https://buzhoushan.github.io/game/index.html";
+				window.location = "https://test.buzhoushan.top/game/index.html";
 			 }
 			 else{
 				goHome();
@@ -87,7 +88,7 @@ var Attack = new game($("myCanvas"));
 			<script type="text/javascript">
             var myData = { gameid: "djz" };
 			 // var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink = "https://buzhoushan.github.io/game/games/djz/index.html";
+			window.shareData.timeLineLink = "https://test.buzhoushan.top/game/games/djz/index.html";
 			function dp_submitScore(score){
 						myData.score = parseInt(score);
 						myData.scoreName ="获得了"+score+"分";		
@@ -97,7 +98,7 @@ var Attack = new game($("myCanvas"));
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到9G游戏排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/game/games/djz/index.html";
+                            window.location = "https://test.buzhoushan.top/game/games/djz/index.html";
                         }
                         else {
                             document.location.href = mebtnopenurl;

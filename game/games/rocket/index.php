@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <title>疯狂火箭哥</title>
     <meta name="apple-mobile-web-app-capable" content="yes"/>

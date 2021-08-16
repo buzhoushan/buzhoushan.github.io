@@ -3,8 +3,8 @@
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'https://buzhoushan.github.io/game/games/feidegenggao/icon.png';
-	lineLink = 'https://buzhoushan.github.io/game/games/feidegenggao/';
+	imgUrl = 'https://test.buzhoushan.top/game/games/feidegenggao/icon.png';
+	lineLink = 'https://test.buzhoushan.top/game/games/feidegenggao/';
 	descContent = "我要飞的更高，快来一起飞起来吧！";
 	updateShareScore(bestScore);
 	appid = '';

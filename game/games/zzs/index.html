@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html manifest="offline.appcache">
 <head>
+<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>空中传媒</title>
@@ -99,8 +100,8 @@
     <script language=javascript>
 		var mebtnopenurl = 'http://game.ikongzhong.cn';
 		window.shareData = {
-		        "imgUrl": "https://buzhoushan.github.io/game/icon/zzs.png",
-		        "timeLineLink": "https://buzhoushan.github.io/game/games/zzs",
+		        "imgUrl": "https://test.buzhoushan.top/game/icon/zzs.png",
+		        "timeLineLink": "https://test.buzhoushan.top/game/games/zzs",
 		        "tTitle": "涨姿势-空中传媒",
 		        "tContent": "涨姿势-空中传媒"
 		};
@@ -110,7 +111,7 @@
 		}
 		function clickMore(){
 			 if((window.location+"").indexOf("zf",1)>0){
-			 	window.location = "https://buzhoushan.github.io/game/games/zzs";
+			 	window.location = "https://test.buzhoushan.top/game/games/zzs";
 			  }
 			  else{
 			 	goHome();
@@ -153,7 +154,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="https://buzhoushan.github.io/game/games/zzs/share.png"
+			<img width=100% src="https://test.buzhoushan.top/game/games/zzs/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -161,7 +162,7 @@
 			<script type="text/javascript">
             var myData = { gameid: "zzs" };
 			var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink = "https://buzhoushan.github.io/game/games/zzs";
+			window.shareData.timeLineLink = "https://test.buzhoushan.top/game/games/zzs";
 			function dp_submitScore(score,step,percent){
 				myData.score = parseInt(score);
 				myData.step = step;
@@ -177,7 +178,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到空中传媒排行榜吗？")) {
-                            window.location = "https://buzhoushan.github.io/game/";
+                            window.location = "https://test.buzhoushan.top/game/";
                         }
                         else {
                             document.location.href = mebtnopenurl;
